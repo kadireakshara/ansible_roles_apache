@@ -1,0 +1,17 @@
+---
+- name: Configure Index.html
+  template: 
+    src: templates/index.j2
+    dest: /var/www/html/index.html
+
+- name: Allow http through firewall
+  firewalld:
+    service: http
+    state: enabled
+    permanent: true
+    immediate: true
+
+- name: Reload firewalld
+  service:
+    name: firewalld
+    state: restarted
