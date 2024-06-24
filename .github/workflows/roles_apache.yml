@@ -1,11 +1,10 @@
 ---
-
 name: Run ansible role
-  on: 
+on: 
    push:
     branches: 
      - main
-  hosts: web
+hosts: web
   tasks:
     - name: install apache
       yum:
