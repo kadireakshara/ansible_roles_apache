@@ -1,5 +1,10 @@
 ---
-- name:
+
+name: Run ansible role
+  on: 
+   push:
+    branches: 
+     - main
   hosts: web
   tasks:
     - name: install apache
