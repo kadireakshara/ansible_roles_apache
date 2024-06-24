@@ -4,7 +4,7 @@
   tasks:
     - name: install apache
       yum:
-        name: httpd
+        name: httpd 
         state: latest
     - name: start apache
       service:
